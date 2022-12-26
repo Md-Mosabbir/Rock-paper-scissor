@@ -1,43 +1,127 @@
-body{
-    max-width: 80%;
-    margin: 0 auto;
-    background-color: gold; /* Add bacground image*/
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.scores{
+
+body {
+  max-width: 80%;
+  margin: 0 auto;
+  
+  background-image: linear-gradient( 96.5deg,  rgba(39,103,187,1) 10.4%, rgba(16,72,144,1) 87.7% );
+}
+
+.scores {
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    border: 3px solid black;
+    border-radius: 50%;
+    font-weight: 600;
+
+    width: 280px;
+    height: 280px;
+    margin: 25px auto;
     display: flex;
-    justify-content: space-around;
-    width: 100%;
-    height: 20vh;
-    border: 1px solid black;
-    margin-top: 20px;
-}
-
-.player,.computer{
-    text-align: center;
-}
-
-.buttons{
-    display: flex;
-    border: 1px solid black;
-    justify-content: space-evenly;
-    margin-top: 25px;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s all;
+    
 
 
 }
 
-.buttons button{
-    margin: 20px;
-    width: 250px;
-    height: 500px;
-    border: 2px solid black;
-    border-radius: 20px;
+.scores > *{
+    
+    font-size: 40px;
+    color: #fff;
+}
+
+
+
+
+
+
+.player{
+  text-align: right;
+}
+
+.computer{
+    text-align: left;
+}
+
+
+.player #player{
+    font-size: 30px;
+    padding: 10px;
+    background-color: rgb(245, 3, 104);
+    color: black;
+    font-weight: 600;
+    border-radius: 100px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.computer #computer{
+    font-size: 30px;
+    padding: 10px;
+    background-color: rgb(245, 3, 104);
+    color: black;
+    border-radius: 100px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(50%, -50%);
+}
+
+
+.buttons {
+  display: flex;
+
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 10px auto 0 auto;
+  width: 900px;
+  height: 500px;
+  padding: 50px;
+  
+}
+
+.buttons button {
+  margin: 10px;
+
+ border: none;
+  border-radius: 50%;
+  font-size: 50px;
+  width: 150px;
+  height: 150px;
+
 
 }
 
-.selection p{
-    text-align: center;
-    margin: 20px;
-    padding: 20px;
-    background-color: aqua;
+.buttons button:hover{
+    background-color: grey;
+    cursor: pointer;
+    scale: 1.2;
+    opacity: 0.7;
+    transition: 0.3s all;
+}
+
+.selection p {
+
+
+
+  text-align: center;
+  margin: 10px;
+  padding: 20px;
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+  border-radius: 100px;
+  font-size: 25px;
+  font-family: 'Arimo', sans-serif;
+  transition:  0.5s all ease-in;
 }
